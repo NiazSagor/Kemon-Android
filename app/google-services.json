@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "37569508318",
+    "firebase_url": "https://kemon-3d101.firebaseio.com",
+    "project_id": "kemon-3d101",
+    "storage_bucket": "kemon-3d101.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37569508318:android:872f9794bc9e9777d1a34f",
+        "android_client_info": {
+          "package_name": "com.angik.fooduprestaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37569508318-d46mfdf6oe1j54ovqbopgluujk1lns5o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.angik.fooduprestaurant",
+            "certificate_hash": "7c1b3c0664812b5efa184f59e515fb18d30a1097"
+          }
+        },
+        {
+          "client_id": "37569508318-fj9fjj21r5fpse5eqt6kkci2vc80e55r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDw7g2uNWFMUJUlGNqQDCRdtf0RWbYfcfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37569508318-fj9fjj21r5fpse5eqt6kkci2vc80e55r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:layoutDirection="ltr"
+    android:paddingStart="0dp"
+    android:paddingTop="0dp"
+    android:paddingEnd="2dp"
+    android:paddingBottom="8dp"
+    android:singleLine="true"
+    android:text="@string/userName"
+    android:textColor="@android:color/white"
+    android:textSize="16sp"
+
+    />

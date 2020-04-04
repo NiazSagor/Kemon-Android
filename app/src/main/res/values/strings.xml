@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Kemon</string>
+
+    <string name="search_hint">Type restaurant name or dish</string>
+
+    <string name="contentDescription">Restaurant Image</string>
+
+    <string name="featuredRestaurants">Featured Restaurants</string>
+    <string name="recommendedDishes">Recommended Dishes</string>
+
+    <string name="newInTown">New In Town</string>
+
+    <string name="mostReviewed">Most Reviewed</string>
+
+    <string name="positiveReview">Positive Review</string>
+
+    <string name="itemName">Item Name</string>
+    <string name="itemPrice">120TK</string>
+    <string name="itemInfo">Item Info</string>
+
+    <string name="yourLocation">Set Location</string>
+
+    <string name="restaurantName">Restaurant Name</string>
+    <string name="restaurantAddress">Agrabad C/A S.Alam Center, 58 Sabdar Ali Rd, Chittagong 4102</string>
+    <string name="restaurantRate">0.0</string>
+    <string name="slash">/</string>
+    <string name="five">5</string>
+    <string name="date">24th November, 2019</string>
+    <string name="userName">User Name</string>
+    <string name="service">Service : </string>
+    <string name="behaviour">Behaviour : </string>
+    <string name="environment">Environment : </string>
+    <string name="userReview">User Review</string>
+
+    <string name="largeText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="rate">Rate</string>
+    <string name="optional">Write (Optional)</string>
+    <string name="writeReview">Write a short review in 140 characters</string>
+    <string name="selectPhoto">No photo selected</string>
+    <string name="addPhoto">Add Photo</string>
+    <string name="post">POST</string>
+    <string name="prePayment">PREPAYMENT</string>
+    <string name="searchForAReview">Search For a Review</string>
+    <string name="searchOffer">Search for Ongoing Offers</string>
+    <string name="searchForBook">Search for Restaurant to Book</string>
+    <string name="searchRestaurant">Search for Restaurant to Discover</string>
+    <string name="lookingAt">Looking at</string>
+    <string name="availableFor">restaurants available for booking</string>
+    <string name="offer">thrilling offers</string>
+    <string name="restaurants">restaurants to discover</string>
+    <string name="clickToSeePhoto">Click to see photo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="eventName">Chittagong Eventz</string>
+    <string name="eventInfo">Arranged 123 events so far</string>
+    <string name="contact">Contact</string>
+    <string name="headLine">Capacity</string>
+    <string name="callRestaurant">Call Restaurant</string>
+    <string name="userNumber">+8801799018683</string>
+    <string name="stats">Stats</string>
+    <string name="reviewMade">Reviews Made</string>
+    <string name="reviewPoint">Review Point</string>
+    <string name="aboutUs">About Us</string>
+    <string name="fbLink">facebook.com/foodup.campus</string>
+    <string name="support">Support</string>
+    <string name="email">binarybusiness10@gmail.com</string>
+    <string name="logout">LOGOUT</string>
+    <string name="manage">Developed and Managed by BinaryBusiness</string>
+
+    <string name="bellpepper">https://kemon-3d101.firebaseio.com/</string>
+    <string name="SearchResult">Search Result</string>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!--        <item android:title="Review"-->
+    <!--            android:icon="@drawable/ic_rate_review_black_24dp"/>-->
+    <!--        <item android:title="About us"-->
+    <!--            android:icon="@drawable/ic_announcement_black_24dp"/>-->
+    <!--        <item android:title="Support"-->
+    <!--            android:icon="@drawable/ic_help_black_24dp"/>-->
+
+</menu>
