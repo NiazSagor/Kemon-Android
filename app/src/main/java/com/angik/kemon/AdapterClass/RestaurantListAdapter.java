@@ -74,8 +74,6 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
                     }
                 }
             });
-
-            new FontUtility(mContext, resNameTextView).changeToMedium();
         }
     }
 
@@ -105,7 +103,7 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
                 return new RestaurantListViewHolder(mContext, view, mListener);
 
             case 2:
-                View view_2 = inflater.inflate(R.layout.res_detail_layout_non_featured, viewGroup, false);
+                View view_2 = inflater.inflate(R.layout.new_res_detail_non_featured, viewGroup, false);
                 return new RestaurantListViewHolder(mContext, view_2, mListener);
 
             default:
@@ -123,6 +121,7 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
         restaurantListViewHolder.resNameTextView.setText(mRestaurants.get(i).getResName());
         restaurantListViewHolder.resAddressTextView.setText(mRestaurants.get(i).getResAddress());
         restaurantListViewHolder.resRateTextView.setText(rateString);
+        new FontUtility(mContext, restaurantListViewHolder.resRateTextView).changeToMedium();
 
         if (resImageUrl != null) {
             mPicasso.load(resImageUrl)
@@ -132,7 +131,6 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
         } else {
             restaurantListViewHolder.resImageView.setVisibility(View.INVISIBLE);
         }
-
     }
 
     @Override

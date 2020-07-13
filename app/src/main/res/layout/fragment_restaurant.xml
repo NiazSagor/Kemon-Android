@@ -43,8 +43,8 @@
             android:layout_height="wrap_content"
             android:text="@string/five"
             android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
 
@@ -62,12 +62,13 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
+            android:clipToPadding="false"
             android:id="@+id/restaurantRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:paddingBottom="8dp" />
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="12dp" />
 
     </RelativeLayout>
 

@@ -63,6 +63,7 @@
                 android:src="@drawable/right_arrow" />
 
             <TextView
+                android:id="@+id/recomDish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
@@ -88,8 +89,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/recomDishTextView"
             android:clipToPadding="false"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp" />
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="12dp" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/imageSlidingViewPager"

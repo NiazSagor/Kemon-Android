@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/toolbar"
-            android:layout_margin="8dp"
+            android:layout_margin="16dp"
             android:orientation="vertical">
 
             <TextView
@@ -103,8 +103,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/itemInfoLayout"
             android:layout_marginTop="8dp"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:paddingBottom="8dp"
             android:text="@string/rate"
             android:textSize="12sp" />
@@ -114,8 +114,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rateTextView"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:orientation="horizontal">
 
             <TextView
@@ -148,8 +148,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/serviceRatingLayout"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:orientation="horizontal">
 
             <TextView
@@ -182,8 +182,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/behaviourRatingLayout"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:orientation="horizontal">
 
             <TextView
@@ -216,8 +216,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/environmentRatingLayout"
             android:layout_marginTop="16dp"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:text="@string/optional"
             android:textSize="12sp" />
 
@@ -226,9 +226,9 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_below="@+id/writeTextView"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:gravity="start"
             android:hint="@string/writeReview"
             android:scrollbars="vertical"
@@ -249,7 +249,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_below="@+id/writeReviewEditText"
-            android:layout_margin="8dp"
+            android:layout_margin="16dp"
             android:gravity="center_horizontal|bottom"
             android:orientation="horizontal">
 

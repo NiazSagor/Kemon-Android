@@ -17,19 +17,13 @@ public class ReviewDetailClass {
     public ReviewDetailClass() {
     }
 
-    public ReviewDetailClass(String postingDate, String userName, String reviewedItemName, String reviewedItemPrice, String reviewedResName, String userReview, String reviewPhotoText, double serviceRate, double behaviourRate, double environmentRate) {
+    public ReviewDetailClass(double behaviourRate, double environmentRate, String postingDate, String reviewedItemName, String reviewedItemPrice, String reviewedResName, double serviceRate, String userName, String userReview) {
         this.postingDate = postingDate;
         this.userName = userName;
         this.reviewedItemName = reviewedItemName;
         this.reviewedItemPrice = reviewedItemPrice;
         this.reviewedResName = reviewedResName;
         this.userReview = userReview;
-
-        if (reviewPhotoText == null) {
-            this.reviewPhotoText = null;
-        } else {
-            this.reviewPhotoText = reviewPhotoText;
-        }
 
         this.serviceRate = serviceRate;
         this.behaviourRate = behaviourRate;

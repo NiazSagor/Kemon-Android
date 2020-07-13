@@ -1,14 +1,17 @@
 package com.angik.kemon.AdapterClass;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RatingBar;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.angik.fooduprestaurant.R;
 import com.angik.kemon.HelperClass.ReviewDetailClass;
+import com.github.ramiz.nameinitialscircleimageview.NameInitialsCircleImageView;
 
 import java.util.List;
 
@@ -31,6 +34,10 @@ public class ReviewListAdapter extends RecyclerView.Adapter<ReviewListAdapter.Re
     }
 
     public static class ReviewListViewHolder extends RecyclerView.ViewHolder {
+
+        RatingBar averageRate;
+
+        NameInitialsCircleImageView profileImage;
 
         TextView reviewDate;
         TextView userName;
@@ -60,6 +67,10 @@ public class ReviewListAdapter extends RecyclerView.Adapter<ReviewListAdapter.Re
             serviceRating = itemView.findViewById(R.id.serviceRating);
             environmentRating = itemView.findViewById(R.id.environmentRating);
             behaviourRating = itemView.findViewById(R.id.behaviourRating);
+
+            profileImage = itemView.findViewById(R.id.profileImage);
+
+            averageRate = itemView.findViewById(R.id.averageRate);
 
             photoAvailableTextView = itemView.findViewById(R.id.photoSelectionTextView);
 
@@ -105,15 +116,29 @@ public class ReviewListAdapter extends RecyclerView.Adapter<ReviewListAdapter.Re
         reviewListViewHolder.environmentRating.setText(environmentRateString);
         reviewListViewHolder.behaviourRating.setText(behaviourRateString);
 
-        if (mReviews.get(i).getReviewPhotoText() == null) {
-            reviewListViewHolder.photoAvailableTextView.setVisibility(View.GONE);
-        } else {
-            reviewListViewHolder.photoAvailableTextView.setText(mReviews.get(i).getReviewPhotoText());
-        }
+        setThumbnail(reviewListViewHolder, i);
+        setAverage(reviewListViewHolder, i);
     }
 
     @Override
     public int getItemCount() {
         return mReviews.size();
+    }
+
+    private void setThumbnail(ReviewListAdapter.ReviewListViewHolder reviewListViewHolder, int i) {
+        String[] split = mReviews.get(i).getUserName().split("\\s+");
+        String initials = split[0].charAt(0) + "" + split[1].charAt(0);
+        NameInitialsCircleImageView.ImageInfo imageInfo = new NameInitialsCircleImageView.ImageInfo
+                .Builder(initials)
+                .build();
+        reviewListViewHolder.profileImage.setImageInfo(imageInfo);
+    }
+
+    private void setAverage(ReviewListAdapter.ReviewListViewHolder reviewListViewHolder, int i) {
+        float average = (float) (mReviews.get(i).getEnvironmentRate()
+                + mReviews.get(i).getBehaviourRate()
+                + mReviews.get(i).getServiceRate()) / 3;
+
+        reviewListViewHolder.averageRate.setRating(average);
     }
 }

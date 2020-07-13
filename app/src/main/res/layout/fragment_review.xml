@@ -1,40 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/green"
     tools:context="com.angik.kemon.Fragments.ReviewFragment">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/green"
-        android:visibility="gone">
-
-        <EditText
-            android:id="@+id/searchEditText"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/tarnsparent_background_border"
-            android:hint="@string/searchForAReview"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="12sp"
-            tools:ignore="Autofill" />
-
-    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reviewRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp" />
+        android:clipToPadding="false"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="12dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/review_layout" />
 
-</LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

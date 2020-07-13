@@ -11,7 +11,7 @@ public class DishDetailClass {
 
     }
 
-    public DishDetailClass(String dishName, String dishImageUrl, String dishResName, String dishPrice) {
+    public DishDetailClass(String dishImageUrl, String dishName, String dishPrice, String dishResName) {
         this.dishName = dishName;
         this.dishImageUrl = dishImageUrl;
         this.dishResName = dishResName;

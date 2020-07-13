@@ -3,19 +3,21 @@ package com.angik.kemon;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.angik.fooduprestaurant.R;
+import com.angik.kemon.AsyncTasks.GetFeaturedDishTask;
 import com.angik.kemon.AsyncTasks.GetFeaturedResTask;
 import com.angik.kemon.AsyncTasks.GetOfferTask;
 import com.angik.kemon.AsyncTasks.GetResTask;
 import com.angik.kemon.HelperClass.Common;
+import com.angik.kemon.HelperClass.DishDetailClass;
 import com.angik.kemon.HelperClass.OfferDetailClass;
 import com.angik.kemon.HelperClass.RestaurantDetailClass;
+import com.angik.kemon.Interfaces.DishCallback;
 import com.angik.kemon.Interfaces.OfferCallback;
 import com.angik.kemon.Interfaces.ResCallback;
 import com.angik.kemon.Interfaces.ResDetailCallback;
@@ -70,5 +72,12 @@ public class SplashActivity extends AppCompatActivity {
                 Common.allRestaurants = resCollection;
             }
         }, "Restaurants").executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+        new GetFeaturedDishTask(new DishCallback() {
+            @Override
+            public void onDishCallback(List<DishDetailClass> featuredDish) {
+                Common.featuredDish = featuredDish;
+            }
+        }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 }

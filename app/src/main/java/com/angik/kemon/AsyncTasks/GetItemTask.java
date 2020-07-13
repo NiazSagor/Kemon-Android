@@ -36,8 +36,6 @@ public class GetItemTask extends AsyncTask<Void, Void, Void> {
 
     List<ResItemDetailClass> list = new ArrayList<>();
 
-    DemoObjectFragment fragment = new DemoObjectFragment();
-
     @Override
     protected void onPreExecute() {
         super.onPreExecute();

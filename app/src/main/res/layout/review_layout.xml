@@ -1,225 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="410dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/reviewDate"
-            android:layout_width="wrap_content"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:padding="8dp"
-            android:text="@string/date"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp">
 
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:padding="8dp"
-            android:text="@string/userName"
-            android:textSize="12sp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="25dp">
 
-    </RelativeLayout>
+                <com.github.ramiz.nameinitialscircleimageview.NameInitialsCircleImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:textColor="@android:color/black"
+                    app:textSize="20sp" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray" />
+            </androidx.cardview.widget.CardView>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/userName"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/reviewDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="see photos"
+                android:textAllCaps="true"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/lightGray" />
 
         <TextView
             android:id="@+id/itemName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:text="@string/itemName"
-            android:textColor="@color/green"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:layout_marginStart="16dp"
+            android:text="Shahi Polao"
+            android:textColor="@android:color/background_dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/resName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Shahi Polao"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/itemPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="@string/itemPrice"
-            android:textColor="@android:color/black"
-            android:textSize="14sp" />
+            android:layout_marginStart="16dp"
+            android:text="120 TK"
+            android:visibility="gone" />
 
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/resName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:text="@string/restaurantName"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
-
-        <TextView
+        <RatingBar
+            android:id="@+id/averageRate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/service"
-            android:textStyle="bold" />
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="1" />
 
         <TextView
-            android:id="@+id/serviceRating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="8dp"
-            android:paddingEnd="0dp"
-            android:text="@string/restaurantRate"
-            android:textStyle="bold" />
+            android:id="@+id/userReview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@string/largeText" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/slash"
-            android:textStyle="bold" />
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/lightGray"
+            app:cardCornerRadius="12dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/five"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/serviceRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Service" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/environmentRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Environment" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/behaviourRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Behaviour" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/behaviour"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/behaviourRating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="8dp"
-            android:paddingEnd="0dp"
-            android:text="@string/restaurantRate"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/slash"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/five"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/environment"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/environmentRating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="8dp"
-            android:paddingEnd="0dp"
-            android:text="@string/restaurantRate"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/slash"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/five"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:text="@string/userReview"
-            android:textColor="@color/green"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/reviewPhotoTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/clickToSeePhoto"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/userReview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="start"
-        android:lines="4"
-        android:maxLines="4"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:text="@string/largeText"
-        android:textSize="12sp" />
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

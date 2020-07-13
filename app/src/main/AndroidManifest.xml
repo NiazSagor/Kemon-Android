@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.angik.fooduprestaurant">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="com.angik.kemon.HelperClass.MyApplication"
         android:allowBackup="true"
@@ -36,7 +38,9 @@
             android:name="com.angik.kemon.ResDetail.ResDetailActivity"
             android:launchMode="singleTop"
             android:parentActivityName="com.angik.kemon.MainActivity" />
-        <activity android:name="com.angik.kemon.WriteReviewActivity" />
+        <activity
+            android:name="com.angik.kemon.WriteReviewActivity"
+            android:parentActivityName="com.angik.kemon.MainActivity" />
         <activity
             android:name="com.angik.kemon.MainActivity"
             android:launchMode="singleTop"
@@ -46,7 +50,5 @@
                 android:value="com.angik.kemon.SearchActivity" />
         </activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

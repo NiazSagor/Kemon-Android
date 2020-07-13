@@ -38,4 +38,7 @@ dependencies {
 
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //circular image view with name initials
+    implementation 'io.github.informramiz:nameinitialscircleimageview:1.6'
 }

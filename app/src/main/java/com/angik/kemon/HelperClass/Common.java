@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Common {
+    public static List<DishDetailClass> featuredDish = new ArrayList<>();
     public static List<OfferDetailClass> offers = new ArrayList<>();
     public static List<RestaurantDetailClass> restaurants = new ArrayList<>();
     public static List<RestaurantDetailClass> allRestaurants = new ArrayList<>();

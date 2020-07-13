@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,11 +19,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.angik.fooduprestaurant.R;
+import com.angik.kemon.AdapterClass.FeaturedDishListAdapter;
 import com.angik.kemon.AdapterClass.OfferImageSlidingAdapter;
 import com.angik.kemon.AdapterClass.RestaurantListAdapter;
 import com.angik.kemon.HelperClass.Common;
 import com.angik.kemon.HelperClass.MyApplication;
 import com.angik.kemon.ResDetail.ResDetailActivity;
+import com.angik.kemon.UtilityClass.FontUtility;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -42,7 +45,7 @@ public class HomeFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     private static final String TAG = "HomeFragment";
-    
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -67,6 +70,9 @@ public class HomeFragment extends Fragment {
     private RestaurantListAdapter featuredResAdapter;
     //RecyclerView for featured dishes
     private RecyclerView dishRecyclerView;
+    private FeaturedDishListAdapter featuredDishListAdapter;
+
+    private TextView featuredResTextView, recomDishTextView;
 
     private ImageView restMoreImageView;
     private ImageView dishMoreImageView;
@@ -105,6 +111,8 @@ public class HomeFragment extends Fragment {
         mAdapter = new OfferImageSlidingAdapter(getContext());
 
         featuredResAdapter = new RestaurantListAdapter(getContext(), Common.restaurants, "featured");
+
+        featuredDishListAdapter = new FeaturedDishListAdapter(Common.featuredDish);
     }
 
     @Override
@@ -115,11 +123,16 @@ public class HomeFragment extends Fragment {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
 
+        LinearLayoutManager layoutManagerFeaturedDish = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+
         restRecyclerView = view.findViewById(R.id.featuredResRecyclerView);
         dishRecyclerView = view.findViewById(R.id.recomDishRecyclerView);
 
         restRecyclerView.setLayoutManager(layoutManager);
         restRecyclerView.setAdapter(featuredResAdapter);
+
+        dishRecyclerView.setLayoutManager(layoutManagerFeaturedDish);
+        dishRecyclerView.setAdapter(featuredDishListAdapter);
 
         featuredResAdapter.setOnItemClickListener(new RestaurantListAdapter.OnItemClickListener() {
             @Override
@@ -148,6 +161,12 @@ public class HomeFragment extends Fragment {
                 //TODO go to another activity to show more featured dishes
             }
         });
+
+        featuredResTextView = view.findViewById(R.id.featuredResTextView);
+        recomDishTextView = view.findViewById(R.id.recomDish);
+
+        new FontUtility(getContext(), featuredResTextView).changeToBold();
+        new FontUtility(getContext(), recomDishTextView).changeToBold();
 
         dotLayout = view.findViewById(R.id.dotLayout);
 
